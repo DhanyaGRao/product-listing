@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <!-- Do _not_  rely on this URL in production. Use only during development.  -->
+    <script type="text/javascript" src="http://netflix.github.io/falcor/build/falcor.browser.js">
+      
+    </script>
+
+    <script>
+  //var model = new falcor.Model({source: new falcor.HttpDataSource('./model.json') });
+var model= new falcor.Model({ 
+  cache:{
+        
+        "genreList":[
+
+        {
+
+          "name": "Recently watched",
+          "titles":
+          [
+          {
+             "id":2345,
+             "name":"DareDeviles",
+             "rating":4
+           }
+
+          ]
+
+        },
+
+        {
+
+          "name": "New Release",
+          "titles":[
+          {
+             "id":2367,
+             "name":"HIDeviles",
+             "rating":3
+           }
+           ]
+
+        }
+
+        ]
+     }
+   });
+
+     model.get('genreList[0..1].titles[0].name').
+     then(function(json){
+      console.log(JSON.stringify(json,null,4))
+      //console.log(value)
+      // document.write(value);
+     })
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

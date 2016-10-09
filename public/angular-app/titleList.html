@@ -1,0 +1,9 @@
+<h1> {{vm.title}}</h1>
+<form>
+Search Title : <input type="text" ng-model="titlename">
+</input>
+</form>
+<ul>
+<li ng-repeat="data in vm.data   | filter : titlename  track by $index ">{{data | uppercase}}
+</li>
+</ul>

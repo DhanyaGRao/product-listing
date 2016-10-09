@@ -1,0 +1,10 @@
+<h1> {{vm.title}}</h1>
+
+<ul>
+<li ng-repeat="data in vm.data | filter : titlename">{{data | uppercase}}
+</li>
+</ul>
+<form>
+<input type="text" ng-model="titlename">
+</input>
+</form>
