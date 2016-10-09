@@ -1,9 +1,10 @@
-<h1> {{vm.title}}</h1>
-<form>
-Search Title : <input type="text" ng-model="titlename">
-</input>
-</form>
-<ul>
+<h1 style="color:#e9711c;"> {{vm.title}}</h1>
+<form name="productForm">
+<p><span style="color:#e9711c;"><b>Title</b></span> <input type="text" ng-model="titlename" required>
+</input><span class="glyphicon glyphicon-search" style="color:green"></span></p>
+<div class="alert alert-danger" role="alert" ng-show="productForm.$dirty && !productForm.$valid">Not a valid title..try again</div></p>
+<ul style="color:#e9711c;">
 <li ng-repeat="data in vm.data   | filter : titlename  track by $index ">{{data | uppercase}}
 </li>
 </ul>
+</form>
