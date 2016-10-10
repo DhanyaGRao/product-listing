@@ -5786,7 +5786,7 @@ var model= new falcor.Model({
             "ProductForm": "BB",
             "Title": {
                 "TitleType": "01",
-                "TitleText": "The Rôle of the Teacher in the Infant and Nursery School"
+                "TitleText": "The Role of the Teacher in the Infant and Nursery School"
             },
             "Contributor": [
                 {
